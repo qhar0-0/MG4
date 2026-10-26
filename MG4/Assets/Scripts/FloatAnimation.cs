@@ -1,4 +1,7 @@
+using System;
+using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class FloatAnimation : MonoBehaviour
 {
@@ -15,6 +18,9 @@ public class FloatAnimation : MonoBehaviour
 
     private void Update()
     {
+        // float move_y = Mathf.Sin(4.0f * Time.deltaTime) * 4.0f;
+
+        // transform.Translate(0, move_y, 0);
         if (_up)
         {
             transform.Translate(0, _moveSpeed * Time.deltaTime, 0);
@@ -35,6 +41,7 @@ public class FloatAnimation : MonoBehaviour
             // read the "!" as "NOT".
             _up = !_up;
         }
+
     }
 
     public void StopAnimation ()
